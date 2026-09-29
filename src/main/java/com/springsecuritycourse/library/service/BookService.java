@@ -20,12 +20,14 @@ public class BookService {
     public Book CreateBook(Book book) {
         return bookRepository.save(book);
     }
+
     //Get All Books in the Library
     public List<Book> GetBooks() {
         return bookRepository.findAll();
     }
+
     //Get Book by ID
-    public Book GetAllBooks(int id){
+    public Book getaBook(Integer id){
         return bookRepository.getById(id);
     }
 

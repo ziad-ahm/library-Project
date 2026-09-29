@@ -1,8 +1,21 @@
 package com.springsecuritycourse.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+
+
+
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+
+@JsonPropertyOrder({
+        "title",
+        "author",
+        "price",
+        "available"
+})
 
 @Entity
 @Table(name = "book")
@@ -20,7 +33,7 @@ public class Book {
     //Constructor
     public Book() {
     }
-    public Book(String author, boolean available, int id, BigDecimal price, String title) {
+    public Book(String author, boolean available, Integer id, BigDecimal price, String title) {
         this.author = author;
         this.available = available;
         this.id = id;
@@ -35,7 +48,7 @@ public class Book {
     public boolean isAvailable() {
         return available;
     }
-    public int getId() {
+    public Integer getId() {
         return id;
     }
     public BigDecimal getPrice() {
@@ -52,7 +65,7 @@ public class Book {
     public void setAvailable(boolean available) {
         this.available = available;
     }
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public void setPrice(BigDecimal price) {
