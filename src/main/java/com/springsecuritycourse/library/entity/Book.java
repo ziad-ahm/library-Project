@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 @Table(name = "book")
 public class Book {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -18,9 +17,9 @@ public class Book {
     private BigDecimal price;
     private boolean available;
 
+    //Constructor
     public Book() {
     }
-
     public Book(String author, boolean available, int id, BigDecimal price, String title) {
         this.author = author;
         this.available = available;
