@@ -2,6 +2,7 @@ package com.springsecuritycourse.library.controller;
 
 import com.springsecuritycourse.library.entity.Book;
 import com.springsecuritycourse.library.service.BookService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,9 +21,9 @@ public class BookController {
 
     //Create a new Book
     @PostMapping
-    public String CreateBook(@RequestBody Book book) {
+    public String CreateBook(@Valid @RequestBody Book book) {
         bookService.CreateBook(book);
-        return"Book Created Successfully!";
+        return"Book Added Successfully!";
     }
 
 
@@ -51,7 +52,7 @@ public class BookController {
 
     //Edit the Book Information
     @PutMapping("/{id}")
-    public String editBook(@PathVariable Integer id, @RequestBody Book book){
+    public String editBook(@Valid @PathVariable Integer id, @RequestBody Book book){
         bookService.EditBook(id, book);
         return "Edit Book Successfully!";
     }

@@ -3,12 +3,11 @@ package com.springsecuritycourse.library.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.math.BigDecimal;
-
-
-
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
 @JsonPropertyOrder({
         "title",
@@ -25,9 +24,16 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotBlank(message = "Title cannot be empty")
     private String title;
+
+    @NotBlank(message = "Author cannot be empty")
     private String author;
+
+    @NotNull(message = "Price cannot be Null")
+    @Positive(message = "Price must be greater than Zero")
     private BigDecimal price;
+
     private boolean available;
 
     //Constructor
