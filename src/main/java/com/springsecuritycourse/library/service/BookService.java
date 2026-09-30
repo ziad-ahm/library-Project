@@ -4,6 +4,8 @@ import com.springsecuritycourse.library.entity.Book;
 import com.springsecuritycourse.library.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -61,4 +63,10 @@ public class BookService {
     public Book GetBookByTitle(String title){
         return bookRepository.findByTitle(title).orElseThrow(null);
     }
+
+    //Search with Author
+    public Book GetBookByAuthor(String author){
+        return bookRepository.findByAuthor(author).orElseThrow(null);
+    }
+
 }

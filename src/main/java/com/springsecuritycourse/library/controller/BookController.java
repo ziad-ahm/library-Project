@@ -64,4 +64,10 @@ public class BookController {
     }
 
 
+    //Search with Author
+    @GetMapping("/bookauthor/{author}")
+    public Book GetBookByAuthor(@PathVariable String author){
+        return bookService.GetBookByAuthor(author);
+    }
+
 }
