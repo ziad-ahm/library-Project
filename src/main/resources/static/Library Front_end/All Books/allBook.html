@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Haven</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="bookStyle.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+        Book Haven
+    </a>
+
+
+    <!-- Search -->
+    <div class="search-container">
+
+        <i data-lucide="search"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for books, authors, ISBN..."
+        >
+
+    </div>
+
+
+    <!-- Right Navigation -->
+    <nav class="header-actions">
+
+        <!-- Dashboard -->
+        <a href="#" class="dashboard-btn">
+            <i data-lucide="layout-grid"></i>
+            <span>Dashboard</span>
+        </a>
+
+
+        <!-- Wishlist -->
+        <button class="icon-btn" id="wishlistBtn">
+            <i data-lucide="heart"></i>
+        </button>
+
+
+        <!-- Cart -->
+        <button class="cart-btn" id="cartBtn">
+
+            <i data-lucide="shopping-bag"></i>
+
+            <span class="cart-count" id="cartCount">
+                0
+            </span>
+
+        </button>
+
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+
+        <!-- Sign In -->
+        <a href="#" class="signin-btn">
+
+            <i data-lucide="circle-user-round"></i>
+
+            <span>Sign In</span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     CATEGORY NAVIGATION
+========================= -->
+
+<nav class="category-nav">
+
+    <div class="category-links">
+
+        <a href="#" class="category-link active">
+            All Products
+        </a>
+
+        <a href="#" class="category-link">
+            Categories
+        </a>
+
+        <a href="#" class="category-link">
+            Authors
+        </a>
+
+        <a href="#" class="category-link">
+            News & Promotions
+        </a>
+
+        <a href="#" class="category-link">
+            Find Store
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+
+<main class="books-section" id="books">
+    <div class="books-header">
+        <div>
+            <p class="section-label">OUR COLLECTION</p>
+            <h1>All Books</h1>
+            <p class="books-subtitle">
+                Discover your next favorite book.
+            </p>
+        </div>
+    </div>
+
+    <div id="books-container" class="books-grid">
+        <!-- Books will be loaded here from API -->
+    </div>
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                Book Haven
+            </a>
+
+            <p>
+                Discover books worth reading.
+                Carefully selected titles for every kind of reader.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#" aria-label="Facebook">
+                    <i data-lucide="facebook"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i data-lucide="instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i data-lucide="twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+
+            <a href="#books">All Books</a>
+
+            <a href="#categories">Categories</a>
+
+            <a href="#">Authors</a>
+
+            <a href="#">News & Promotions</a>
+
+        </div>
+
+
+        <!-- Customer Service -->
+
+        <div class="footer-column">
+
+            <h3>Customer Service</h3>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Shipping & Delivery</a>
+
+            <a href="#">Returns & Refunds</a>
+
+            <a href="#">FAQs</a>
+
+            <a href="#">Find a Store</a>
+
+        </div>
+
+
+        <!-- Contact -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>Get In Touch</h3>
+
+            <div class="contact-item">
+
+                <i data-lucide="map-pin"></i>
+
+                <span>
+                    Cairo, Egypt
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i data-lucide="phone"></i>
+
+                <span>
+                    +20 100 000 0000
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i data-lucide="mail"></i>
+
+                <span>
+                    hello@bookhaven.com
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Book Haven. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="BookScript.js"></script>
+
+</body>
+</html>
