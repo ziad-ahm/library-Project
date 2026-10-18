@@ -9,6 +9,12 @@ import jakarta.validation.constraints.Positive;
 
 import java.math.BigDecimal;
 
+@JsonPropertyOrder({
+        "title",
+        "author",
+        "price",
+        "available"
+})
 
 @Entity
 @Table(name = "book")
@@ -28,11 +34,7 @@ public class Book {
     @Positive(message = "Price must be greater than Zero")
     private BigDecimal price;
 
-    @Column(name = "image_url")
-    private String imageUrl;
-
     private boolean available;
-
 
     //Constructor
     public Book() {
@@ -61,9 +63,6 @@ public class Book {
     public String getTitle() {
         return title;
     }
-    public String getImageUrl() {
-        return imageUrl;
-    }
 
     //setters
     public void setAuthor(String author) {
@@ -80,9 +79,6 @@ public class Book {
     }
     public void setTitle(String title) {
         this.title = title;
-    }
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
 }
